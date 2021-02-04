@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localisation", "Localisation\Localisation.csproj", "{B03971EC-7082-455B-9B18-B2F2A685A9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalisationsTests", "LocalisationsTests\LocalisationsTests.csproj", "{03E3732E-EDE4-472C-8272-056CC958EF67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B03971EC-7082-455B-9B18-B2F2A685A9E7} = {B03971EC-7082-455B-9B18-B2F2A685A9E7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B03971EC-7082-455B-9B18-B2F2A685A9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03971EC-7082-455B-9B18-B2F2A685A9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03971EC-7082-455B-9B18-B2F2A685A9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03971EC-7082-455B-9B18-B2F2A685A9E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E3732E-EDE4-472C-8272-056CC958EF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E3732E-EDE4-472C-8272-056CC958EF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E3732E-EDE4-472C-8272-056CC958EF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E3732E-EDE4-472C-8272-056CC958EF67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {549BA684-3D4E-423D-93CD-7405EF777A96}
+	EndGlobalSection
+EndGlobal
