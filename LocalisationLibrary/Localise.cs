@@ -1,19 +1,40 @@
-﻿using System;
+﻿using Localisation;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+
 
 
 namespace LocalisationLibrary
 {
     public class Localise
     {
-        public string buildUrl(double lon, double lat)
+        public HttpWebResponse getInformations(string url)
         {
-            string url = $"https://data.mobilites-m.fr/api/linesNear/json?x={lon}&y={lat}&dist=400&details=true".Replace(',', '.');
+            WebRequest request = WebRequest.Create(url);
+            request.Credentials = CredentialCache.DefaultCredentials;
+            request.ContentType = "application/json; charset=utf-8";
+            var response = (HttpWebResponse)request.GetResponse();
+            return response;
+        }
 
-            return url;
+        public List<BusStop> jsonToData(HttpWebResponse response)
+        {
+
+            string jsonResponse;
+            using (var streamReader = new StreamReader(response.GetResponseStream()))
+            {
+                jsonResponse = streamReader.ReadToEnd();
+            }
+            var busStopList = JsonConvert.DeserializeObject<List<BusStop>>(jsonResponse);
+            Console.WriteLine(response.StatusDescription);
+
+            return busStopList;
         }
     }
 }
