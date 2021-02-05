@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Localisation;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace LocalisationsTests
@@ -9,13 +10,16 @@ namespace LocalisationsTests
         [TestMethod]
         public void TestUrl()
         {
-            string url = "";
-
             // GIVEN
+            Model model = new Model();
 
-            // WHEN 
+            // WHEN
+            string urlToTest = model.buildUrl(0.1, 0.1);
 
-            // THEN
+            // THEN 
+            string urlExpected = "https://data.mobilites-m.fr/api/linesNear/json?x=0.1&y=0.1&dist=400&details=true";
+            Assert.AreEqual(urlExpected, urlToTest);
+            
 
         }
     }

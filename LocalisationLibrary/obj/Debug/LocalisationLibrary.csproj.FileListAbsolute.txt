@@ -1,0 +1,12 @@
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\LocalisationLibrary.dll
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\LocalisationLibrary.pdb
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\Localisation.exe
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\Localisation.pdb
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\Localisation.exe.config
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\obj\Debug\LocalisationLibrary.csprojAssemblyReference.cache
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\obj\Debug\LocalisationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\obj\Debug\LocalisationLibrary.csproj.CopyComplete
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\obj\Debug\LocalisationLibrary.dll
+C:\Users\bapti\source\repos\Localisation\LocalisationLibrary\obj\Debug\LocalisationLibrary.pdb

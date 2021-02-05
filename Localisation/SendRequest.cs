@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Localisation
 {
-    class SendRequest : ISendRequest
+    public class SendRequest : ISendRequest
     {
 
         public HttpWebResponse getInformations(string url)
@@ -18,7 +18,6 @@ namespace Localisation
             request.Credentials = CredentialCache.DefaultCredentials;
             request.ContentType = "application/json; charset=utf-8";
             var response = (HttpWebResponse)request.GetResponse();
-
             return response;
         }
 
@@ -35,6 +34,8 @@ namespace Localisation
 
             return busStopList;
         }
+
+        public List<LineStop> 
 
     }
 }

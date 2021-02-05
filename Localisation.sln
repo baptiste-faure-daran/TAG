@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalisationsTests", "Local
 		{B03971EC-7082-455B-9B18-B2F2A685A9E7} = {B03971EC-7082-455B-9B18-B2F2A685A9E7}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalisationLibrary", "LocalisationLibrary\LocalisationLibrary.csproj", "{8D39261A-45F1-4F84-976C-192183795760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{03E3732E-EDE4-472C-8272-056CC958EF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E3732E-EDE4-472C-8272-056CC958EF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E3732E-EDE4-472C-8272-056CC958EF67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D39261A-45F1-4F84-976C-192183795760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D39261A-45F1-4F84-976C-192183795760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D39261A-45F1-4F84-976C-192183795760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D39261A-45F1-4F84-976C-192183795760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

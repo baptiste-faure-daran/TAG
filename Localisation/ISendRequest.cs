@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Localisation
 {
-    interface ISendRequest
+    public interface ISendRequest
     {
         HttpWebResponse getInformations(string url);
 
