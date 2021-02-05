@@ -61,7 +61,7 @@ namespace Localisation
 
         public void displayBusStop(string url)
         {
-            Localise request = new Localise();
+            Request request = new Request();
             HttpWebResponse test = request.getInformations(url);
             List<BusStop> busStop = request.jsonToData(test);
             foreach (BusStop stop in busStop)
@@ -76,7 +76,7 @@ namespace Localisation
             
         }
 
-        Localise locaUrl = new Localise();
+
         
 
         public void offlineDisplay()

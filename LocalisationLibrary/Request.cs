@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace LocalisationLibrary
 {
-    public class Localise
+    public class Request
     {
         public HttpWebResponse getInformations(string url)
         {
@@ -36,5 +36,6 @@ namespace LocalisationLibrary
 
             return busStopList;
         }
+
     }
 }
