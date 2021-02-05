@@ -1,12 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using LocalisationLibrary;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using LocalisationLibrary;
 
 namespace Localisation
 {
@@ -52,12 +47,16 @@ namespace Localisation
 
         public string buildUrl(double lon, double lat)
         {
-            string url = $"https://data.mobilites-m.fr/api/linesNear/json?x={lon}&y={lat}&dist=400&details=true".Replace(',','.');
+            string url = $"https://data.mobilites-m.fr/api/linesNear/json?x={lon}&y={lat}&dist=400&details=true".Replace(',', '.');
 
             return url;
         }
+        public string BuildLineUrl(string lineId)
+        {
+            string url = $"https://data.mobilites-m.fr/api/routers/default/index/routes?codes={lineId}";
 
-        
+            return url;
+        }
 
         public void displayBusStop(string url)
         {
@@ -66,18 +65,30 @@ namespace Localisation
             List<BusStop> busStop = request.jsonToData(test);
             foreach (BusStop stop in busStop)
             {
+
                 Console.WriteLine("Id de l'arrêt : " + stop.id);
                 Console.WriteLine("Nom de l'arrêt : " + stop.name);
                 Console.WriteLine("Zone de l'arrêt : " + stop.zone);
-                Console.WriteLine("Zone de l'arrêt : " + stop.zone);
                 Console.WriteLine("----------------------");
 
+                string lineUrl = BuildLineUrl(stop.lines[0]);
+                displayLinesStop(lineUrl);
             }
-            
         }
+        public void displayLinesStop(string url)
+        {
+            Request request = new Request();
+            HttpWebResponse test = request.getInformations(url);
+            List<LigneStop> ligneStop = request.jsonToDataLigne(test);
+            foreach(LigneStop ligne in ligneStop)
+            {
+                Console.WriteLine("Id de la ligne : " + ligne.id);
+                Console.WriteLine("Nom de la ligne : " + ligne.shortName);
+                Console.WriteLine("Couleur de la ligne : " + ligne.color);
+                Console.WriteLine("-----------------------");
+            } 
 
-
-        
+        }
 
         public void offlineDisplay()
         {
@@ -93,7 +104,6 @@ namespace Localisation
             }
         }
 
-        
 
 
     }

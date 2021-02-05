@@ -21,5 +21,10 @@ namespace LocalisationsTests
         {
             throw new NotImplementedException();
         }
+
+        public List<LigneStop> jsonToDataLigne(HttpWebResponse response)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

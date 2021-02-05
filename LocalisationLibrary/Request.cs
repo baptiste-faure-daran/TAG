@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 
 
 
+
 namespace LocalisationLibrary
 {
-    public class Request
+    public class Request : ISendRequest
     {
         public HttpWebResponse getInformations(string url)
         {
@@ -32,6 +33,19 @@ namespace LocalisationLibrary
                 jsonResponse = streamReader.ReadToEnd();
             }
             var busStopList = JsonConvert.DeserializeObject<List<BusStop>>(jsonResponse);
+            Console.WriteLine(response.StatusDescription);
+
+            return busStopList;
+        }
+        public List<LigneStop> jsonToDataLigne(HttpWebResponse response)
+        {
+
+            string jsonResponse;
+            using (var streamReader = new StreamReader(response.GetResponseStream()))
+            {
+                jsonResponse = streamReader.ReadToEnd();
+            }
+            var busStopList = JsonConvert.DeserializeObject<List<LigneStop>>(jsonResponse);
             Console.WriteLine(response.StatusDescription);
 
             return busStopList;

@@ -1,6 +1,11 @@
 ﻿using Localisation;
+using LocalisationLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+
+
 
 namespace LocalisationsTests
 {
@@ -21,6 +26,30 @@ namespace LocalisationsTests
             Assert.AreEqual(urlExpected, urlToTest);
             
 
+        }
+
+        [TestMethod]
+        public void testBusStop()
+        {
+            // GIVEN
+            List<BusStop> busStopList = new List<BusStop>();
+            BusStop busStop = new BusStop();
+            busStop.id = "SEM:1138";
+            busStop.name = "Grenoble, Marceau - Jardin des Vallons";
+            busStop.lon = 5.72217;
+            busStop.lat = 45.18245;
+            busStop.zone = "SEM_GENMARCEAU";
+            busStop.lines = new List<string>(new string[] { "SEM: C3" });
+
+            busStopList.Add(busStop);
+            string expected = JsonConvert.SerializeObject(busStopList);
+
+            // WHEN 
+            OfflineRequest request = new OfflineRequest();
+            string result = request.getOfflineInformations();
+
+            // THEN
+            Assert.AreEqual(expected, result);
         }
     }
 }
