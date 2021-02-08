@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using LocalisationLibrary;
 
 namespace Localisation
 {
@@ -21,7 +22,6 @@ namespace Localisation
 
             Console.WriteLine(choice);
             
-
             Model model = new Model();
             model.getUrl(choiceNumber);
         }

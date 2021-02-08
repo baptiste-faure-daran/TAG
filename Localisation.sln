@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localisation", "Localisation\Localisation.csproj", "{B03971EC-7082-455B-9B18-B2F2A685A9E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D39261A-45F1-4F84-976C-192183795760} = {8D39261A-45F1-4F84-976C-192183795760}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalisationsTests", "LocalisationsTests\LocalisationsTests.csproj", "{03E3732E-EDE4-472C-8272-056CC958EF67}"
 	ProjectSection(ProjectDependencies) = postProject

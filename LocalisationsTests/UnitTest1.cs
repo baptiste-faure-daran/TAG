@@ -13,7 +13,7 @@ namespace LocalisationsTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestUrl()
+        public void TestBusStopUrl()
         {
             // GIVEN
             Model model = new Model();
@@ -23,8 +23,7 @@ namespace LocalisationsTests
 
             // THEN 
             string urlExpected = "https://data.mobilites-m.fr/api/linesNear/json?x=0.1&y=0.1&dist=400&details=true";
-            Assert.AreEqual(urlExpected, urlToTest);
-            
+            Assert.AreEqual(urlExpected, urlToTest);    
 
         }
 
@@ -32,17 +31,8 @@ namespace LocalisationsTests
         public void testBusStop()
         {
             // GIVEN
-            List<BusStop> busStopList = new List<BusStop>();
-            BusStop busStop = new BusStop();
-            busStop.id = "SEM:1138";
-            busStop.name = "Grenoble, Marceau - Jardin des Vallons";
-            busStop.lon = 5.72217;
-            busStop.lat = 45.18245;
-            busStop.zone = "SEM_GENMARCEAU";
-            busStop.lines = new List<string>(new string[] { "SEM: C3" });
-
-            busStopList.Add(busStop);
-            string expected = JsonConvert.SerializeObject(busStopList);
+            FakeSendRequest faker = new FakeSendRequest();
+            string expected = faker.getFakeInformations(); 
 
             // WHEN 
             OfflineRequest request = new OfflineRequest();
@@ -50,6 +40,16 @@ namespace LocalisationsTests
 
             // THEN
             Assert.AreEqual(expected, result);
+        }
+
+        public void testBusLine()
+        {
+            // GIVEN
+
+            // WHEN
+
+            // THEN
+
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Localisation
+namespace LocalisationLibrary
 {
     public class LigneStop
     {
@@ -16,5 +16,6 @@ namespace Localisation
         public string textColor { get; set; }
         public string mode { get; set; }
         public string type { get; set; }
+
     }
 }

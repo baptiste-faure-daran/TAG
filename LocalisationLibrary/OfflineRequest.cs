@@ -1,5 +1,4 @@
-﻿using Localisation;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,11 +27,58 @@ namespace LocalisationLibrary
             return output;
         }
 
-        public List<BusStop> OfflineJsonToData(string response)
+        public string getOfflineLineInformations()
+        {
+            List<LigneStop> busLigneList = new List<LigneStop>();
+            LigneStop busLigne= new LigneStop();
+
+
+            busLigne.id = "SEM:1138";
+            busLigne.gtfsId = "Grenoble, Marceau - Jardin des Vallons";
+            busLigne.shortName = "";
+            busLigne.longName = "";
+            busLigne.color = "SEM_GENMARCEAU";
+            busLigne.textColor = "SEM_GENMARCEAU";
+            busLigne.mode = "SEM_GENMARCEAU";
+            busLigne.type = "SEM_GENMARCEAU";
+
+            busLigneList.Add(busLigne);
+            string output = JsonConvert.SerializeObject(busLigneList);
+            return output;
+        }
+
+        public List<BusStop> OfflineJsonToDataBus(string response)
         {
             var busStopList = JsonConvert.DeserializeObject<List<BusStop>>(response);
 
             return busStopList;
+        }
+
+        public List<LigneStop> OfflineJsonToDataLigne(string response)
+        {
+            var busLigneList = JsonConvert.DeserializeObject<List<LigneStop>>(response);
+
+            return busLigneList;
+        }
+
+        public List<BusStop> generateOfflineBusStop()
+        {
+            OfflineRequest request = new OfflineRequest();
+            string test = request.getOfflineInformations();
+            List<BusStop> offlineBusStop = request.OfflineJsonToDataBus(test);
+
+            return offlineBusStop;
+        }
+
+        public List<LigneStop> generateOfflineLineStop()
+        {
+            OfflineRequest request = new OfflineRequest();
+
+            string data = request.getOfflineLineInformations();
+            List<LigneStop> offlineLigneStop = request.OfflineJsonToDataLigne(data);
+
+
+            return offlineLigneStop;
         }
     }
 }

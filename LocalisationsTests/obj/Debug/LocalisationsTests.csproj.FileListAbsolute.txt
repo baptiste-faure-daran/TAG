@@ -20,3 +20,5 @@ C:\Users\bapti\source\repos\Localisation\LocalisationsTests\obj\Debug\Localisati
 C:\Users\bapti\source\repos\Localisation\LocalisationsTests\obj\Debug\LocalisationsTests.csproj.CopyComplete
 C:\Users\bapti\source\repos\Localisation\LocalisationsTests\obj\Debug\LocalisationsTests.dll
 C:\Users\bapti\source\repos\Localisation\LocalisationsTests\obj\Debug\LocalisationsTests.pdb
+C:\Users\bapti\source\repos\Localisation\LocalisationsTests\bin\Debug\LocalisationLibrary.dll
+C:\Users\bapti\source\repos\Localisation\LocalisationsTests\bin\Debug\LocalisationLibrary.pdb

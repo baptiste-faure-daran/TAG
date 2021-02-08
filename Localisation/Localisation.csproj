@@ -49,13 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusStop.cs" />
-    <Compile Include="ISendRequest.cs" />
-    <Compile Include="LigneStop.cs" />
-    <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

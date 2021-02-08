@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Localisation
+namespace LocalisationLibrary
 {
     public class BusStop
     {
@@ -10,5 +14,7 @@ namespace Localisation
         public double lat { get; set; }
         public string zone { get; set; }
         public List<string> lines { get; set; }
+
+
     }
 }

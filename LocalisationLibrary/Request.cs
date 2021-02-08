@@ -1,5 +1,4 @@
-﻿using Localisation;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace LocalisationLibrary
 {
-    public class Request : ISendRequest
+    public class Request : IRequest
     {
         public HttpWebResponse getInformations(string url)
         {
@@ -23,7 +22,6 @@ namespace LocalisationLibrary
             var response = (HttpWebResponse)request.GetResponse();
             return response;
         }
-
         public List<BusStop> jsonToData(HttpWebResponse response)
         {
 
@@ -50,6 +48,25 @@ namespace LocalisationLibrary
 
             return busStopList;
         }
+
+        public List<BusStop> generateBusStop(string url)
+        {
+            Request request = new Request();
+            HttpWebResponse data = request.getInformations(url);
+            List<BusStop> busStop = request.jsonToData(data);
+
+            return busStop;
+        }
+
+        public List<LigneStop> generateLineStop(string url)
+        {
+            Request request = new Request();
+            HttpWebResponse data = request.getInformations(url);
+            List<LigneStop> ligneStop = request.jsonToDataLigne(data);
+
+            return ligneStop;
+        }
+
 
     }
 }

@@ -44,15 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusInfo.cs" />
+    <Compile Include="BusStop.cs" />
+    <Compile Include="IRequest.cs" />
+    <Compile Include="LineStop.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="OfflineRequest.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Localisation\Localisation.csproj">
-      <Project>{b03971ec-7082-455b-9b18-b2f2a685a9e7}</Project>
-      <Name>Localisation</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

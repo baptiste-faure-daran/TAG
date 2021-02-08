@@ -5,13 +5,18 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Localisation
+namespace LocalisationLibrary
 {
-    public interface ISendRequest
+    public interface IRequest
     {
-        List<BusStop> jsonToData(HttpWebResponse response);
         HttpWebResponse getInformations(string url);
+
+        List<BusStop> jsonToData(HttpWebResponse response);
+
         List<LigneStop> jsonToDataLigne(HttpWebResponse response);
 
+        List<BusStop> generateBusStop(string url);
+
+        List<LigneStop> generateLineStop(string url);
     }
 }
