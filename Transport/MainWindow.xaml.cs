@@ -21,13 +21,14 @@ namespace Transport
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly MyViewModel _viewModel;
+        
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new MyViewModel();
             // The DataContext serves as the starting point of Binding Paths
-            DataContext = _viewModel;
+            //_viewModel = new MyViewModel();
+
+            //DataContext = _viewModel;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

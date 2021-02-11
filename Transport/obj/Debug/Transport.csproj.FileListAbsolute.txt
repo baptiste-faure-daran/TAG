@@ -13,3 +13,4 @@ C:\Users\bapti\source\repos\Localisation\Transport\obj\Debug\Transport.csproj.Ge
 C:\Users\bapti\source\repos\Localisation\Transport\obj\Debug\Transport.csproj.CoreCompileInputs.cache
 C:\Users\bapti\source\repos\Localisation\Transport\obj\Debug\Transport.exe
 C:\Users\bapti\source\repos\Localisation\Transport\obj\Debug\Transport.pdb
+C:\Users\bapti\source\repos\Localisation\Transport\obj\Debug\GeneratedInternalTypeHelper.g.cs

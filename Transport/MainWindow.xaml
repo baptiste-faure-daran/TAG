@@ -4,8 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Transport"
+        xmlns:viewModel="clr-namespace:Transport.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="887.5" Width="4175">
+        Title="MainWindow" Height="887.5" Width="3500">
+
+    <Window.DataContext>
+        <viewModel:MyViewModel/>
+
+    </Window.DataContext>
+
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -35,9 +44,19 @@
         <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Distance :" HorizontalAlignment="Right"/>
         <TextBox Text="{Binding Distance, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" Margin="4" HorizontalAlignment="Left" Width="200"/>
 
+        <Label Grid.Column="0" Grid.Row="4" Margin="4" Content="Result :" HorizontalAlignment="Right"/>
+        <TextBox Text="{Binding Result, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="4" Margin="4" HorizontalAlignment="Left" Width="200"/>
+
         <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="4" Text="{Binding Latitude}" HorizontalAlignment="Center" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="4" Text="{Binding Longitude}" HorizontalAlignment="Center" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="4" Text="{Binding Distance}" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" Margin="20" Text="{Binding Result}" HorizontalAlignment="Center" FontWeight="Bold"/>
 
+        <Button Command="{Binding ModifyData}">
+            <Button.Content>
+                <TextBlock>Dire bonjour</TextBlock>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>
+    
